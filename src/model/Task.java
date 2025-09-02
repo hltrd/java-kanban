@@ -1,3 +1,5 @@
+package model;
+
 import java.util.Objects;
 
 public class Task {
@@ -50,6 +52,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("Task{id=%d, name='%s', status=%s}", id, name, status);
+        return String.format("model.Task{id=%d, name='%s', status=%s}", id, name, status);
     }
 }

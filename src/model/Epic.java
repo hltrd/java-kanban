@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,21 +15,21 @@ public class Epic extends Task {
         return Collections.unmodifiableList(subtaskIds);
     }
 
-    void addSubtaskId(int subtaskId) {
+    public void addSubtaskId(int subtaskId) {
         subtaskIds.add(subtaskId);
     }
 
-    void removeSubtaskId(int subtaskId) {
+    public void removeSubtaskId(int subtaskId) {
         subtaskIds.remove((Integer) subtaskId);
     }
 
-    void clearSubtasks() {
+    public void clearSubtasks() {
         subtaskIds.clear();
     }
 
     @Override
     public String toString() {
-        return String.format("Epic{id=%d, name='%s', status=%s, subtasks=%s}",
+        return String.format("model.Epic{id=%d, name='%s', status=%s, subtasks=%s}",
                 getId(), getName(), getStatus(), subtaskIds);
     }
 }

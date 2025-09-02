@@ -1,3 +1,7 @@
+package manager;
+
+import model.*;
+
 import java.util.*;
 
 public class TaskManager {
@@ -42,9 +46,7 @@ public class TaskManager {
     public Epic createEpic(Epic epic) {
         int id = generateId();
         epic.setId(id);
-        epic.setStatus(Status.NEW);
         epics.put(id, epic);
-        updateEpicStatus(id);
         return epic;
     }
 
@@ -55,7 +57,6 @@ public class TaskManager {
         if (stored == null) return null;
         stored.setName(incoming.getName());
         stored.setDescription(incoming.getDescription());
-        updateEpicStatus(id);
         return stored;
     }
 
@@ -74,7 +75,6 @@ public class TaskManager {
         subtasks.clear();
         for (Epic epic : epics.values()) {
             epic.clearSubtasks();
-            epic.setStatus(Status.NEW);
         }
     }
     public Subtask getSubtaskById(int id) { return subtasks.get(id); }
