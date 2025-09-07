@@ -1,4 +1,4 @@
-package model;
+package main.java.model;
 
 public class Subtask extends Task {
     private int epicId;
@@ -22,4 +22,3 @@ public class Subtask extends Task {
                 getId(), epicId, getName(), getStatus());
     }
 }
-
