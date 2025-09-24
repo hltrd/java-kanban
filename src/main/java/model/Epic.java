@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Epic extends Task {
+
     private final List<Integer> subtaskIds = new ArrayList<>();
 
     public Epic(String name, String description) {
