@@ -1,0 +1,27 @@
+package main.service;
+
+import main.model.Coach;
+
+public class CounterOfTrainings {
+    private Coach coach;
+    private int count;
+
+    public CounterOfTrainings(Coach coach, int count) {
+        this.coach = coach;
+        this.count = count;
+    }
+
+    public Coach getCoach() {
+        return coach;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        return coach.getSurname() + " " + coach.getName() + " " +
+                coach.getMiddleName() + " — " + count + " тренировок";
+    }
+}
